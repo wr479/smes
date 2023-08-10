@@ -1,0 +1,65 @@
+@import "../modules/basic.scss";
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: $black;
+    .header{
+        .headers-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0 ;
+            .content{
+                display: flex;
+                gap: 60px;
+                align-items: center;
+                img{
+                    width: 260px;
+                    height: 21px;
+                }
+                .text{
+                    display: flex;
+                    gap: 40px;
+                    .p-text{
+                        display: block;
+                        color: $white;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+          
+    }
+    
+    &.room{
+        background-color: white;
+        .headers-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0 ;
+            .content{
+                display: flex;
+                gap: 60px;
+                align-items: center;
+                svg{
+                    width: 260px;
+                    height: 21px;
+                    path{
+                        fill: black
+                    }
+            
+                }
+                .text{
+                    display: flex;
+                    gap: 40px;
+                    
+                    .p-text{
+                        display: block;
+                        color: $black;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    } 
+}
