@@ -24,6 +24,10 @@ $brown:rgba(154, 80, 15, 1);
 $grey:rgba(0, 0, 0, .4);
 $green:#14D945;
 
+@mixin grey(){
+    font-family: "Druk_Wide_Cyr";
+    color: #999;
+}
 // миксины
 @mixin padding-desktop(){
     padding: 40px;

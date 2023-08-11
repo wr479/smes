@@ -1,4 +1,6 @@
 section{
+    overflow: hidden;
+    padding-right: 0px;
     .hero-section{
         background-color: $black;
         padding-top:200px ;
@@ -9,7 +11,16 @@ section{
         background-repeat: no-repeat;
         
         &.croot{
-            background-image: url(../../images/background/poom.png);
+            background-image: url(../images/background/poom.png);
+        }
+        &.eat{
+            background-image: url(../images/background/eat.png);
+        }
+        &.program{
+            background-image: url(../images/background/program.png);
+            .hero-container .content .h1-text{
+                width: 1122px;
+            }
         }
         .hero-container{
             .content{
@@ -91,6 +102,7 @@ section{
             gap: 60px;
             text-align: left;
             .h1-text-wow{
+                font-family: "Druk_Wide_Cyr";
                 font-size: 50px;
                 font-style: normal;
                 font-weight: 700;
@@ -99,6 +111,11 @@ section{
                 text-transform: uppercase;
                 color: rgba(0, 0, 0, 0.2);
                 margin-bottom: -100px;
+                color: transparent;
+                -webkit-text-stroke: 2px rgba(0, 0, 0, 0.2);
+
+
+
             }
             .h1-text{
                 font-family: "Druk_Wide_Cyr";
@@ -109,10 +126,14 @@ section{
                 letter-spacing: -1px;
                 text-transform: uppercase;
                 max-width: 1414px;
+                .grey{
+                    @include grey;
+                }
             }
             .p-text{
                 font-size: 24px;
                 width: 886px;
+                margin-top: -20px;
             }
             button{
                 align-items: flex-start;
@@ -215,6 +236,7 @@ section{
             .cards{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
+                border: 1px solid $white;
                 .white{
                     display: flex;
                     justify-content: space-between;
@@ -227,6 +249,7 @@ section{
                         display: block;
                         font-size: 200px;
                         font-weight: 700;
+                        height: 208px;
                     }
                     .p-text{
                         font-family: "Gilroy";
@@ -235,6 +258,10 @@ section{
                         width: 288px;
                         
                         color: $black;
+                        @include laptop{
+                            font-size: 28px;
+                            width: 240px;
+                        }
                     }
                 }
                 .black{
@@ -255,6 +282,7 @@ section{
                         display: block;
                         font-size: 200px;
                         font-weight: 700;
+                        height: 208px;
                     }
                     .p-text{
                         display: block;
@@ -262,6 +290,9 @@ section{
                         width: 288px;
                         font-family: "Gilroy";
                         color: $black;
+                        @include laptop{
+                            font-size: 28px;
+                        }
                     }
                 }
             }
@@ -531,7 +562,8 @@ section{
                 align-items: flex-start;
             }
             .photo{
-                display: flex;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 20px;
                 img{
                     max-width: 415px;
@@ -644,6 +676,7 @@ section{
         .charter-container{
             display: flex;
             gap: 20px;
+            justify-content: center;
             img{
                 @include laptop{
                     width: 350px;
@@ -718,6 +751,10 @@ section{
                     letter-spacing: -1px;
                     text-transform: uppercase;
                     width: 922px;
+                    .grey{
+                        font-family: "Druk_Wide_Cyr";
+                        color:  #999;
+                    }
                 }
                 .p-text{
                     display: block;
@@ -772,6 +809,16 @@ section{
                 line-height: 120%; /* 60px */
                 letter-spacing: -1px;
                 text-transform: uppercase;
+                color: $white;
+                
+            }
+            .p-text{
+                font-family: "Gilroy";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%; /* 28.8px */
+                letter-spacing: -0.48px;
                 color: $white;
             }
             .content{
@@ -836,6 +883,319 @@ section{
                 }
                 .grey{
                     background-color: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+    .eating-section{
+        .eating-container{
+            display: flex;
+            .contant{
+                margin-top: 80px;
+                margin-left: 100px;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .h1-text{
+                    font-family: "Druk_Wide_Cyr";
+                    font-size: 50px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 60px */
+                    letter-spacing: -1px;
+                    text-transform: uppercase;
+                    width: 803px;
+                }
+                .p-text{
+                    width: 691px;
+                    font-family: "Gilroy";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; /* 24px */
+                    letter-spacing: -0.4px;
+
+                }
+            } 
+            .photo{
+                display: flex;
+                position: relative;
+                width: 100%;
+                border: 1px solid $black;
+            }
+            .margin{
+                position: absolute;
+                top: 167px;
+                left: 314px;
+            }
+        }
+    }
+    .youtube-section{
+        display: flex;
+        align-items: center;
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            .h1-text{
+                font-family: "Druk_Wide_Cyr";
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 60px */
+                letter-spacing: -1px;
+                text-transform: uppercase;
+                width: 803px;
+                @include laptop{
+                    width: 769px;
+                }
+            }
+            .p-text{
+                font-family: "Gilroy";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%; /* 24px */
+                letter-spacing: -0.4px;
+                width: 691px;
+                @include laptop{
+                    width: 768px;
+                }
+                
+            }
+        }
+    }
+    .personal-section{
+        display: flex;
+        .contant{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding:80px 0 ;
+            padding-left: 100px;
+            
+            .h1-text{
+                font-family: "Druk_Wide_Cyr";
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 60px */
+                letter-spacing: -1px;
+                text-transform: uppercase;
+                width: 779px
+            }
+            .p-text{
+                width: 691px;
+                font-family: "Gilroy";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%; /* 24px */
+                letter-spacing: -0.4px;
+            }
+            .price{
+                font-family: "Gilroy";
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%;
+            }
+            button{
+                max-width: 385px;
+            }
+            .small-text{
+                margin-top: -20px;
+                opacity: 0.4;
+                width: 415px;
+                font-family: "Gilroy";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%; /* 14.4px */
+                letter-spacing: -0.24px;
+            }
+        }
+    }
+    .blog-container-two{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .blog-section{
+        background-color: $black;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 100px 0;
+        
+        .h1-text{
+            display: block;
+            font-family: "Druk_Wide_Cyr";
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 60px */
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: $white;
+        }
+        .blog-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            .card{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                img{
+                    width: 100%;
+                }
+                .h1-text{
+                    font-family: "Gilroy";
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; /* 38.4px */
+                    letter-spacing: -0.64px;
+                    color: $white;
+                    width: 309px;
+                }
+                .p-text{
+                    font-family: "Gilroy";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; /* 21.6px */
+                    letter-spacing: -0.36px;
+                    color: $white;
+                    opacity: 0.4;
+                    width: 335px;
+                }
+            }
+        }
+    }
+    .faq-section{
+        background-color: $black;
+        padding: 186px 0;
+        .faq-container{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .h1-text{
+                    display: block;
+                    color: #FFF;
+                    font-family: "Druk_Wide_Cyr";
+                    font-size: 50px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 60px */
+                    letter-spacing: -1px;
+                    text-transform: uppercase;
+                }
+                .cards{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0 60px;
+                    .card{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 45px 0;
+                        border-top: 1px solid $white;
+                        border-bottom: 1px solid $white;
+                        .text{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                            .h1-text{
+                                display: block;
+                                font-family: "Gilroy";
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 120%; /* 38.4px */
+                                letter-spacing: -0.64px;
+                                @include laptop{
+                                    font-size: 28px;
+                                }
+                            }
+                            .p-text{
+                                font-family: "Gilroy";
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 120%; /* 24px */
+                                letter-spacing: -0.4px;
+                                color: $white;
+                                opacity: 0.4;
+                            }
+                            .none-one,.none-two,.none-three,.none-four,.none-five,.none-six{
+                                display: none;
+                            }
+                            .block-one,.block-two,.block-three,.block-four,.block-five,.block-six{
+                                display: block;                            
+                            }
+                        }
+                        .plus-one,.plus-two,.plus-three,.plus-four,.plus-five,.plus-six{
+                            display: block;
+                        }
+                        .plus-none-one,.plus-none-two,.plus-none-three,.plus-none-four,.plus-none-five,.plus-none-six{
+                            display: none;
+                        }
+                        .minus-block-one,.minus-block-two,.minus-block-three,.minus-block-four,.minus-block-five,.minus-block-six{
+                            display: block;
+                        }
+                        .minus-one,.minus-two,.minus-three,.minus-four,.minus-five,.minus-six{
+                            display: none;
+                        }
+                    }
+                }
+        }
+    }
+    .map-section{
+        background: $black;
+        padding: 100px 0;
+        padding-top: 186px;
+        .map-container{
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            .h1-text{
+                color: #FFF;
+                font-family: "Druk_Wide_Cyr";
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 60px */
+                letter-spacing: -1px;
+                text-transform: uppercase;
+            }
+            .contant{
+                display: flex;
+                justify-content: space-between;
+                .text{
+                    display: flex;
+                    gap: 200px;
+                    a{
+                        text-decoration: none;
+                        .number{
+                            display: flex;
+                            gap: 20px;
+                            .p-text{
+                                color: $white;
+                                font-family: "Gilroy";
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 120%; /* 28.8px */
+                                letter-spacing: -0.48px;
+                            }
+                        }
+                    }
+                }
+                .icon{
+                    display: flex;
+                    gap: 15px;
                 }
             }
         }
