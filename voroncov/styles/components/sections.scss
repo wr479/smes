@@ -15,6 +15,8 @@ section{
         }
         &.eat{
             background-image: url(../images/background/eat.png);
+            background-size: contain;
+            background-position: right;
         }
         &.program{
             background-image: url(../images/background/program.png);
@@ -23,10 +25,23 @@ section{
             }
         }
         .hero-container{
+            .low-text{
+                display: block;
+                font-family: "Gilroy";
+                color: white;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%; /* 28.8px */
+                letter-spacing: -0.48px;
+                width: 641px;
+                margin-top: 40px;
+            }
             .content{
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
+                
                 .p-text{
                     font-family: "Gilroy";
                     display: block;
@@ -250,6 +265,9 @@ section{
                         font-size: 200px;
                         font-weight: 700;
                         height: 208px;
+                        @include small_laptop{
+                            font-size: 150px;
+                        }   
                     }
                     .p-text{
                         font-family: "Gilroy";
@@ -260,7 +278,11 @@ section{
                         color: $black;
                         @include laptop{
                             font-size: 28px;
-                            width: 240px;
+                            max-width: 240px;
+                        }
+                        @include small_laptop{
+                            font-size: 22px;
+                            max-width: 200px;
                         }
                     }
                 }
@@ -283,6 +305,9 @@ section{
                         font-size: 200px;
                         font-weight: 700;
                         height: 208px;
+                        @include small_laptop{
+                            font-size: 150px;
+                        }
                     }
                     .p-text{
                         display: block;
@@ -292,6 +317,10 @@ section{
                         color: $black;
                         @include laptop{
                             font-size: 28px;
+                        }
+                        @include small_laptop{
+                            font-size: 22px;
+                            width: 200px;
                         }
                     }
                 }
@@ -473,6 +502,9 @@ section{
                         gap: 403px;
                         .marhin{
                             margin-right: 267px;
+                            @include small_laptop{
+                                margin-right: 28px;
+                            }
                         }
                     }
                 }
@@ -509,6 +541,9 @@ section{
                     }
                     .end{
                         margin-right: 233px;
+                        @include small_laptop {
+                            margin-right: -13px;
+                        }
                     }
                 }
                 .caramome{
@@ -529,10 +564,16 @@ section{
                         button{
                             border: 2px solid ;
                             width: 415px;
+                            @include small_laptop{
+                                width: 349px;
+                            }
                             
                         }
                         .mar{
                             margin-right: 95px;
+                            @include small_laptop{
+                                margin: 0;
+                            }
                         }
                     }
                 }
@@ -556,6 +597,19 @@ section{
                     line-height: 120%; /* 60px */
                     letter-spacing: -1px;
                     text-transform: uppercase;
+                    .grey{
+                        font-family: "Druk_Wide_Cyr";
+                        color: #999;
+                        font-size: 50px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 120%; /* 60px */
+                        letter-spacing: -1px;
+                        text-transform: uppercase;
+                    }
+                }
+                button{
+                    width: 385px;
                 }
                 display: flex;
                 justify-content: space-between;
@@ -565,10 +619,16 @@ section{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 20px;
+                @include small_laptop{
+
+                }
                 img{
                     max-width: 415px;
                     @include laptop{
                         max-width: 350px;
+                    }
+                    @include small_laptop{
+                        max-width: 292px;
                     }
                 }
             }
@@ -616,6 +676,9 @@ section{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 20px;
+                @include small_laptop{
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
                 .card{
                     border: 2px solid $white;
                     .one{
@@ -810,7 +873,8 @@ section{
                 letter-spacing: -1px;
                 text-transform: uppercase;
                 color: $white;
-                
+                font-family: "Druk_Wide_Cyr";
+
             }
             .p-text{
                 font-family: "Gilroy";
@@ -857,32 +921,49 @@ section{
                 margin-bottom: 40px;
                 .h1-text{
                     display: block;
-                    font-family: Druk Wide Cyr;
-                    font-size: 64px;
+                    font-family: "Druk_Wide_Cyr";
+                    font-size: 50px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: 120%; /* 60px */
                     letter-spacing: -1px;
                     text-transform: uppercase;
-                    width: 1023px;
+                    width: 869px;
+                }
+                button{
+                    background-color: $black;
+                    color: #FFF;
                 }
             }
             .grid{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                .p-text{
-                    display: block;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                .p-text{          
                     font-family: "Gilroy";
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 120%; /* 24px */
                     letter-spacing: -0.4px;
-                    max-width: 575px;
+                    max-width:100%;
                     padding: 20px;
+                    display: flex;
+                    height: 78px;
+                    align-items: center;
+                    
                 }
                 .grey{
                     background-color: rgba(0, 0, 0, 0.1);
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                }
+                .aaa{
+                    margin: 20px 0;
+                    border: none;
+                }
+                .bbb{
+                    margin: 20px 0px;
+                    
                 }
             }
         }
@@ -892,7 +973,11 @@ section{
             display: flex;
             .contant{
                 margin-top: 80px;
-                margin-left: 100px;
+                margin-left: 159px;
+                padding-bottom:100px ;
+                @include laptop{
+                    margin-left: 38px;
+                }
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
@@ -922,11 +1007,22 @@ section{
                 position: relative;
                 width: 100%;
                 border: 1px solid $black;
+                img{
+                    max-width: 529px;
+                    max-height: 560px;
+                }
             }
             .margin{
                 position: absolute;
-                top: 167px;
-                left: 314px;
+                top: 70px;
+                left: 438px;
+                width: 511px;
+                @include laptop{
+                    width: 400px;
+                    position: absolute;
+                    top: 167px;
+                    left: 314px;
+                }
             }
         }
     }
@@ -974,7 +1070,7 @@ section{
             gap: 40px;
             padding:80px 0 ;
             padding-left: 100px;
-            
+            width: 50%;
             .h1-text{
                 font-family: "Druk_Wide_Cyr";
                 font-size: 50px;
@@ -1198,6 +1294,45 @@ section{
                     gap: 15px;
                 }
             }
+        }
+    }
+    .main-error{
+        display: flex;
+        flex-direction: column;
+        
+        background-color:black;
+        .h1-text{
+            color: white;
+            opacity: 0.2;
+        }
+        .ticker{
+            margin-top: 50px;
+        }
+    }
+    .content-error{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 160px 0;
+        padding-bottom: 00px;
+        gap: 40px;
+        .h1-text{
+            font-family: "Druk_Wide_Cyr";
+            font-size: 78px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 93.6px */
+            letter-spacing: -1.56px;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            width: 1180px;
+        }
+        button{
+            width: 580px;
+
         }
     }
 }

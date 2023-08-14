@@ -24,7 +24,7 @@
                         <a href="blog.html"><span class="p-text">Блог</span></a>
                      </div>
                 </div>
-                <button class="btn white">СВЯЗАТЬСЯ</button>
+                <button class="btn white open-popup">СВЯЗАТЬСЯ</button>
             </div>
         </div>
     </header>
@@ -98,7 +98,7 @@
                             <span class="p-text">Обучение применению прогрессивной сверхнагрузки и периодизации</span>
                         </div>
                     </div>
-                    <button class="btn green">начать консультацию</button>
+                    <button class="btn green open-popup">начать консультацию</button>
                 </div>
             </div>
         </section>
@@ -107,7 +107,7 @@
                 <div class="stages-container container">
                     <div class="start">
                         <span class="h1-text">Каждый шаг будет приближать тебя к цели</span>
-                        <button class="btn green">ХОЧУ КРУТОЙ РЕЗУЛЬТАТ</button>
+                        <button class="btn green open-popup">ХОЧУ КРУТОЙ РЕЗУЛЬТАТ</button>
                     </div>
                     <div class="cards">
                         <div class="card white">
@@ -159,7 +159,7 @@
                 <div class="online-container container">
                     <div class="start">
                         <span class="h1-text">Полное ведение онлайн включает:</span>
-                        <button class="btn black">ХОЧУ РЕЗУЛЬТАТ</button>
+                        <button class="btn black open-popup">ХОЧУ РЕЗУЛЬТАТ</button>
                     </div>
                     <div class="grid">
                         <div class="one-grid"><span class="p-text grey">Тренировочный план с периодизацией от 15 недель</span></div>
@@ -190,7 +190,7 @@
                             <span class="h1-text">ОТЗЫВЫ</span>
                             <span class="p-text">Отзывы людей, которые уже преобразили свою жизнь к лучшему</span>
                         </div>
-                        <button class="btn green">ОСТАВИТЬ ОТЗЫВ</button>
+                        <button class="btn green open-popup">ОСТАВИТЬ ОТЗЫВ</button>
                     </div>
                     <div class="cards">
                         <div class="card">
@@ -239,7 +239,7 @@
                 <div class="result-container container">
                     <div class="start">
                         <span class="h1-text">ПОСМОТРИ НА РЕЗУЛЬТАТЫ МОИХ ПОДОПЕЧНЫХ, КОТОРЫЕ УЖЕ ДОСТИГЛИ ЦЕЛИ</span>
-                        <button class="btn green">Хочу также</button>
+                        <button class="btn green open-popup">Хочу также</button>
                     </div>
                     <div class="photo">
                         <img src="images/gallery/rock.jpg">
@@ -251,6 +251,66 @@
             </div>
         </section>
     </main>
+    <div class="popup-fade close">
+        <div class="popup-container container">
+            <div class="one">
+                <div class="text">
+                    <span class="fully open">заявка</span>
+                    <span class="successfully close">заявка Оформлена успешно!</span>
+                </div>
+                <svg class="close-popup" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M1.45703 1.45752L16.542 16.5425M1.45703 16.5425L16.542 1.45752" stroke="black" stroke-width="2" stroke-linecap="square"/>
+                  </svg>
+            </div>
+            <div class="one-content open">
+                <span class="p-text">Хотите похудеть или набрать массу?</span>
+                <div class="button-one">
+                    <button class="grey-one">Похудеть</button>
+                    <button class="grey-one">Набрать массу</button>
+                </div>
+                <button class="btn green one-button">Далее</button>
+                <div class="first-step">
+                    <span class="black">ШАГ 1</span>
+                    <span class="grey">ШАГ 2</span>
+                    <span class="grey">ШАГ 2</span>
+                </div>
+            </div>
+            <div class="kg close">
+                <span class="p-text">Сколько бы хотелось скинуть (набрать) кг?</span>
+                <div class="choice">
+                    <button class="grey">1</button>
+                    <button class="grey">2</button>
+                    <button class="grey">3</button>
+                    <button class="grey">4</button>
+                </div>
+                <input placeholder="Произвольное количество">
+                <button class="btn green two-button">Далее</button>
+                <div class="first-step">
+                    <span class="grey">ШАГ 1</span>
+                    <span class="black">ШАГ 2</span>
+                    <span class="grey">ШАГ 2</span>
+                </div>
+            </div>
+            <div class="three-content close">
+                <span class="p-text">Укажите Ваш номер телефона и мы свяжемся с Вами</span>
+                <div class="text">
+                <input  type="tel" name="tel" placeholder="Номер телефона">
+                <input type="text" placeholder="Имя">
+                <button class="btn green final-button ">Подать заявку</button>
+                <div class="text-one">
+                <span class="small-text">Нажимая кнопку “Подать заяку” Вы даете согласие на обработку персональных данных</span>
+                </div>
+                </div> 
+                <div class="first-step">
+                    <span class="grey">ШАГ 1</span>
+                    <span class="grey">ШАГ 2</span>
+                    <span class="black">ШАГ 3</span>
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
     <footer>
         <div class="footer-section">
             <div class="footer-container container">
@@ -288,6 +348,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="scripts/app.js" type="module"> </script>
 </body>
 </html>

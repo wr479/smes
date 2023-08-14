@@ -20,11 +20,22 @@ header {
                 .text{
                     display: flex;
                     gap: 40px;
+                    @include small_laptop{
+                        gap: 20px;
+                    }
                     .p-text{
                         font-family: "Gilroy";
                         display: block;
                         color: $white;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%; /* 21.6px */
+                        letter-spacing: -0.36px;
                         opacity: 0.6;
+                        @include small_laptop{
+                            font-size: 14px;
+                        }
                     }
                 }
             }

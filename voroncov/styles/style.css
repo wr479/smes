@@ -26,7 +26,7 @@
     --container:1560px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   :root {
     --container:1345px;
   }
@@ -121,12 +121,26 @@ section .hero-section.croot {
 }
 section .hero-section.eat {
   background-image: url(../images/background/eat.png);
+  background-size: contain;
+  background-position: right;
 }
 section .hero-section.program {
   background-image: url(../images/background/program.png);
 }
 section .hero-section.program .hero-container .content .h1-text {
   width: 1122px;
+}
+section .hero-section .hero-container .low-text {
+  display: block;
+  font-family: "Gilroy";
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  width: 641px;
+  margin-top: 40px;
 }
 section .hero-section .hero-container .content {
   display: flex;
@@ -348,6 +362,11 @@ section .stages-section .stages-container .cards .white .h1-text {
   font-weight: 700;
   height: 208px;
 }
+@media (max-width: 1550px) {
+  section .stages-section .stages-container .cards .white .h1-text {
+    font-size: 150px;
+  }
+}
 section .stages-section .stages-container .cards .white .p-text {
   font-family: "Gilroy";
   display: block;
@@ -358,7 +377,13 @@ section .stages-section .stages-container .cards .white .p-text {
 @media (max-width: 1700px) {
   section .stages-section .stages-container .cards .white .p-text {
     font-size: 28px;
-    width: 240px;
+    max-width: 240px;
+  }
+}
+@media (max-width: 1550px) {
+  section .stages-section .stages-container .cards .white .p-text {
+    font-size: 22px;
+    max-width: 200px;
   }
 }
 section .stages-section .stages-container .cards .black {
@@ -382,6 +407,11 @@ section .stages-section .stages-container .cards .white-black .h1-text {
   font-weight: 700;
   height: 208px;
 }
+@media (max-width: 1550px) {
+  section .stages-section .stages-container .cards .white-black .h1-text {
+    font-size: 150px;
+  }
+}
 section .stages-section .stages-container .cards .white-black .p-text {
   display: block;
   font-size: 32px;
@@ -392,6 +422,12 @@ section .stages-section .stages-container .cards .white-black .p-text {
 @media (max-width: 1700px) {
   section .stages-section .stages-container .cards .white-black .p-text {
     font-size: 28px;
+  }
+}
+@media (max-width: 1550px) {
+  section .stages-section .stages-container .cards .white-black .p-text {
+    font-size: 22px;
+    width: 200px;
   }
 }
 section .program-section {
@@ -571,6 +607,11 @@ section .table-section .table-container .table .main-content .arror {
 section .table-section .table-container .table .main-content .arror .marhin {
   margin-right: 267px;
 }
+@media (max-width: 1550px) {
+  section .table-section .table-container .table .main-content .arror .marhin {
+    margin-right: 28px;
+  }
+}
 section .table-section .table-container .table .no {
   background: none;
 }
@@ -606,6 +647,11 @@ section .table-section .table-container .contant-end .prices .price .p-text {
 section .table-section .table-container .contant-end .prices .end {
   margin-right: 233px;
 }
+@media (max-width: 1550px) {
+  section .table-section .table-container .contant-end .prices .end {
+    margin-right: -13px;
+  }
+}
 section .table-section .table-container .contant-end .caramome {
   display: flex;
   justify-content: space-between;
@@ -627,8 +673,18 @@ section .table-section .table-container .contant-end .caramome .button button {
   border: 2px solid;
   width: 415px;
 }
+@media (max-width: 1550px) {
+  section .table-section .table-container .contant-end .caramome .button button {
+    width: 349px;
+  }
+}
 section .table-section .table-container .contant-end .caramome .button .mar {
   margin-right: 95px;
+}
+@media (max-width: 1550px) {
+  section .table-section .table-container .contant-end .caramome .button .mar {
+    margin: 0;
+  }
 }
 section .result-section {
   padding: 140px 0;
@@ -653,6 +709,19 @@ section .result-section .result-container .start .h1-text {
   letter-spacing: -1px;
   text-transform: uppercase;
 }
+section .result-section .result-container .start .h1-text .grey {
+  font-family: "Druk_Wide_Cyr";
+  color: #999;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 60px */
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+section .result-section .result-container .start button {
+  width: 385px;
+}
 section .result-section .result-container .photo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -664,6 +733,11 @@ section .result-section .result-container .photo img {
 @media (max-width: 1700px) {
   section .result-section .result-container .photo img {
     max-width: 350px;
+  }
+}
+@media (max-width: 1550px) {
+  section .result-section .result-container .photo img {
+    max-width: 292px;
   }
 }
 section .rewievs-section {
@@ -710,6 +784,11 @@ section .rewievs-section .rewievs-container .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+}
+@media (max-width: 1550px) {
+  section .rewievs-section .rewievs-container .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 section .rewievs-section .rewievs-container .cards .card {
   border: 2px solid #ffffff;
@@ -898,6 +977,7 @@ section .purpose-section .purpose-container .h1-text {
   letter-spacing: -1px;
   text-transform: uppercase;
   color: #ffffff;
+  font-family: "Druk_Wide_Cyr";
 }
 section .purpose-section .purpose-container .p-text {
   font-family: "Gilroy";
@@ -942,42 +1022,63 @@ section .online-section .online-container .start {
 }
 section .online-section .online-container .start .h1-text {
   display: block;
-  font-family: Druk Wide Cyr;
-  font-size: 64px;
+  font-family: "Druk_Wide_Cyr";
+  font-size: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 60px */
   letter-spacing: -1px;
   text-transform: uppercase;
-  width: 1023px;
+  width: 869px;
+}
+section .online-section .online-container .start button {
+  background-color: rgb(0, 0, 0);
+  color: #FFF;
 }
 section .online-section .online-container .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 section .online-section .online-container .grid .p-text {
-  display: block;
   font-family: "Gilroy";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 120%; /* 24px */
   letter-spacing: -0.4px;
-  max-width: 575px;
+  max-width: 100%;
   padding: 20px;
+  display: flex;
+  height: 78px;
+  align-items: center;
 }
 section .online-section .online-container .grid .grey {
   background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+section .online-section .online-container .grid .aaa {
+  margin: 20px 0;
+  border: none;
+}
+section .online-section .online-container .grid .bbb {
+  margin: 20px 0px;
 }
 section .eating-section .eating-container {
   display: flex;
 }
 section .eating-section .eating-container .contant {
   margin-top: 80px;
-  margin-left: 100px;
+  margin-left: 159px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+@media (max-width: 1700px) {
+  section .eating-section .eating-container .contant {
+    margin-left: 38px;
+  }
 }
 section .eating-section .eating-container .contant .h1-text {
   font-family: "Druk_Wide_Cyr";
@@ -1004,10 +1105,23 @@ section .eating-section .eating-container .photo {
   width: 100%;
   border: 1px solid rgb(0, 0, 0);
 }
+section .eating-section .eating-container .photo img {
+  max-width: 529px;
+  max-height: 560px;
+}
 section .eating-section .eating-container .margin {
   position: absolute;
-  top: 167px;
-  left: 314px;
+  top: 70px;
+  left: 438px;
+  width: 511px;
+}
+@media (max-width: 1700px) {
+  section .eating-section .eating-container .margin {
+    width: 400px;
+    position: absolute;
+    top: 167px;
+    left: 314px;
+  }
 }
 section .youtube-section {
   display: flex;
@@ -1057,6 +1171,7 @@ section .personal-section .contant {
   gap: 40px;
   padding: 80px 0;
   padding-left: 100px;
+  width: 50%;
 }
 section .personal-section .contant .h1-text {
   font-family: "Druk_Wide_Cyr";
@@ -1281,6 +1396,43 @@ section .map-section .map-container .contant .text a .number .p-text {
 section .map-section .map-container .contant .icon {
   display: flex;
   gap: 15px;
+}
+section .main-error {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+section .main-error .h1-text {
+  color: white;
+  opacity: 0.2;
+}
+section .main-error .ticker {
+  margin-top: 50px;
+}
+section .content-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 160px 0;
+  padding-bottom: 0px;
+  gap: 40px;
+}
+section .content-error .h1-text {
+  font-family: "Druk_Wide_Cyr";
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 93.6px */
+  letter-spacing: -1.56px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  width: 1180px;
+}
+section .content-error button {
+  width: 580px;
 }
 
 .ticker {
@@ -1514,6 +1666,12 @@ section .map-section .map-container .contant .icon {
   opacity: 0.2;
 }
 
+.active {
+  background-color: black;
+  color: white;
+  opacity: 1;
+}
+
 .popup-fade:before {
   content: "";
   background: #000;
@@ -1525,8 +1683,92 @@ section .map-section .map-container .contant .icon {
   opacity: 0.7;
 }
 
-.close-popup {
+.popup-reviews:before {
+  content: "";
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.popup-reviews {
+  position: relative;
+  z-index: 99;
+}
+.popup-reviews .popup-reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 40px;
+  width: 660px;
+}
+.popup-reviews .popup-reviews-container .end {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.popup-reviews .popup-reviews-container .end button {
+  width: 100%;
+}
+.popup-reviews .popup-reviews-container .p-text {
+  display: flex;
+  font-family: "Gilroy";
+  color: #000000;
+  opacity: 0.4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: -0.28px;
+  width: 340px;
+}
+.popup-reviews .popup-reviews-container .start {
+  display: flex;
+  justify-content: space-between;
+}
+.popup-reviews .popup-reviews-container .start .h1-text {
+  font-family: "Druk_Wide_Cyr";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 60px */
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.popup-reviews .popup-reviews-container input {
+  padding: 25px 20px;
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: #FFF;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.36px;
+  opacity: 0.3;
+}
+.popup-reviews .popup-reviews-container .big-input {
+  padding-bottom: 112px;
+}
+.popup-reviews .close-popup {
   cursor: pointer;
+}
+.error {
+  border: 1px solid rgb(175, 29, 29) !important;
 }
 
 footer .footer-section {
@@ -1606,7 +1848,7 @@ footer .footer-section .footer-container .three .grid button {
 }
 footer .footer-section .footer-container .three .grid input {
   height: 69px;
-  width: 415px;
+  max-width: 415px;
   padding: 25px 20px;
   background-color: none;
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -1627,7 +1869,7 @@ footer .footer-section .footer-container .three .grid input {
     --container:1560px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   :root {
     --container:1345px;
   }
@@ -1688,11 +1930,26 @@ header .header .headers-container .content .text {
   display: flex;
   gap: 40px;
 }
+@media (max-width: 1550px) {
+  header .header .headers-container .content .text {
+    gap: 20px;
+  }
+}
 header .header .headers-container .content .text .p-text {
   font-family: "Gilroy";
   display: block;
   color: #ffffff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.36px;
   opacity: 0.6;
+}
+@media (max-width: 1550px) {
+  header .header .headers-container .content .text .p-text {
+    font-size: 14px;
+  }
 }
 header.room {
   background-color: white;

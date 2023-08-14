@@ -220,6 +220,11 @@
     
 }
 
+.active {
+    background-color: black;
+    color: white;
+    opacity: 1;
+}
 .popup-fade:before {
     content: "";
     background: #000;
@@ -231,6 +236,102 @@
     opacity: 0.7;
     
 }
+.popup-reviews:before {
+    content: "";
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    
+}
+.popup-reviews{
+  
+    position: relative;
+    z-index: 99;
+    .popup-reviews-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position:fixed;
+        z-index: 1000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+        padding: 40px;
+       
+        width: 660px;
+      .end{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        button{
+            width: 100%;
+            
+        }
+      }
+        .p-text{
+            display: flex;
+            font-family: "Gilroy";
+            color: #000000;
+            opacity: 0.4;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%; /* 16.8px */
+            letter-spacing: -0.28px;
+            width: 340px;
+           
+        }
+        .start{
+            display: flex;
+            justify-content: space-between;
+            .h1-text{
+                font-family: "Druk_Wide_Cyr";
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 60px */
+                letter-spacing: -1px;
+                text-transform: uppercase;
+            }
+        }
+        input{
+            padding: 25px 20px;
+            width: 100%;
+            border: 2px solid rgba(0, 0, 0, 0.10);
+            background: #FFF;
+            font-family: Gilroy;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%; /* 21.6px */
+            letter-spacing: -0.36px;
+            opacity: 0.3;
+        }
+        .big-input{
+            padding-bottom: 112px;
+        }
+    }
+       
+        
+       
+
 .close-popup{
     cursor: pointer;
+}
+.popup-reviews{
+
+}
+}
+
+.error{
+    border: 1px solid rgb(175, 29, 29) !important;
 }
