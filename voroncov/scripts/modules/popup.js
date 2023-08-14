@@ -4,12 +4,12 @@ export function popup(){
     });
 
     $('.choice button').on('click', function() {
-        $('.choice button').removeClass('active'); // Убираем класс active у всех кнопок
-        $(this).addClass('active'); // Добавляем класс active только текущей нажатой кнопке
+        $('.choice button').removeClass('active');
+        $(this).addClass('active'); 
     });
     $('.button-one button').on('click', function() {
-        $('.button-one button').removeClass('active'); // Убираем класс active у всех кнопок
-        $(this).addClass('active'); // Добавляем класс active только текущей нажатой кнопке
+        $('.button-one button').removeClass('active'); 
+        $(this).addClass('active'); 
     });
 
     $('.one-button').on('click', () => {
@@ -48,7 +48,6 @@ export function popup(){
             $('.three-content input').addClass("error")
         } else {
             $('.three-content input').css('border', 'none');
-            // Ваш код для отправки формы
             alert('Форма отправлена!');
         }
     });
