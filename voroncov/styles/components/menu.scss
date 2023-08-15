@@ -1,0 +1,29 @@
+.menu{
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    top: 50px;
+    .h1-text{
+        display: block;
+        font-family: "Druk_Wide_Cyr";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 28.8px */
+        letter-spacing: -0.48px;
+        text-transform: uppercase;
+        padding: 40px 20px;
+        color: black;
+        border-bottom:1px solid rgba(0, 0, 0, 0.1) ;
+        
+    }
+    button{
+        position: fixed;
+        bottom: 20px;
+        color: black;
+        border:  1px solid black;
+        width: 100%;
+        background-color: white;
+    }
+}

@@ -6,17 +6,22 @@ section{
         padding-top:200px ;
         padding-bottom: 40px;
         width: 100vw;
-        
+        height: 100vh;
+        background-size: contain;
+        background-position: right;
         background-image: url(../images/background/man.png);
         background-repeat: no-repeat;
+        @include tabletHorizontal{
+            background-position: bottom;
+            padding-top: 100px;
+        }
         
         &.croot{
             background-image: url(../images/background/poom.png);
         }
         &.eat{
             background-image: url(../images/background/eat.png);
-            background-size: contain;
-            background-position: right;
+            
         }
         &.program{
             background-image: url(../images/background/program.png);
@@ -67,6 +72,10 @@ section{
                     letter-spacing: -1.28px;
                     text-transform: uppercase;
                     color: $white;
+                    @include tabletHorizontal{
+                        width: 335px;
+                        
+                    }
                     .grey{
                         font-family: "Druk_Wide_Cyr";
                         color:rgba(255, 255, 255, 0.60);
@@ -79,6 +88,9 @@ section{
                     gap: 30px;
                     backdrop-filter: blur(100px);
                     width: 800px;
+                    @include tabletHorizontal{
+                        width: 605px;
+                    }
                     .h1-text{
                         display: block;
                         font-family: "Gilroy";
@@ -160,12 +172,18 @@ section{
         
         .cars{
             display: flex;
+            @include tabletHorizontal{
+                flex-direction: column;
+            }
             .card{
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
                 padding: 40px;
                 border-right: 1px solid $black;
+                @include tabletHorizontal{
+                    border-bottom: 1px solid $black;
+                }
                 .h1-text{
                     font-family: "Gilroy";
                     display: block;
@@ -212,8 +230,12 @@ section{
             font-weight: 700;
             line-height: 120%; /* 60px */
             letter-spacing: -1px;
-
-
+            @include tabletHorizontal{
+                font-size: 32px;
+            }
+            svg{
+                height: 24px;
+            }
         }
         
     }
@@ -239,6 +261,9 @@ section{
                     display: block;
                     align-content: flex-start;
                     height: 62px;
+                    @include tabletHorizontal{
+                        display: none;
+                    }
                 }
             }
             .p-text{
@@ -252,6 +277,14 @@ section{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 border: 1px solid $white;
+                @include tabletHorizontal{
+                    grid-template-columns: 1fr;
+                }
+                svg{
+                    @include tabletHorizontal{
+                        display: none;
+                    }
+                }
                 .white{
                     display: flex;
                     justify-content: space-between;
@@ -335,7 +368,9 @@ section{
             .contant-start{
                 display: flex;
                 flex-direction: column; 
-                
+                @include tabletVertical{
+                    display: none;
+                }
                 .program{
                     display: flex;
                     justify-content: space-between;
@@ -377,6 +412,9 @@ section{
                         display: flex;
                         gap: 10px;
                         width: 320px;
+                        @include tabletHorizontal{
+                            width: 272px;
+                        }
                         .tag{
                             padding: 10px 20px;
                             font-size: 18px;
@@ -386,6 +424,9 @@ section{
                             letter-spacing: -0.36px;
                             border-radius: 1000px;
                             border: 1px solid rgba(0, 0, 0, 0.20);
+                            @include tabletHorizontal{
+                                font-size: 14px;
+                            }
                         }
                     }   
                     .content{
@@ -397,6 +438,9 @@ section{
                         @include laptop{
                             gap: 288px;
                         }
+                        @include tabletHorizontal{
+                            gap: 119px
+                        }
                         .h1-text{
                             font-family: "Gilroy";
                             display: block;
@@ -405,11 +449,17 @@ section{
                             font-weight: 500;
                             line-height: 120%; /* 38.4px */
                             letter-spacing: -0.64px;
+                            @include tabletHorizontal{
+                                font-size: 20px;
+                            }
                         }
                         .text{
                             display: flex;
                             flex-direction: column;
                             gap: 20px;
+                            @include tabletHorizontal{
+                                width: 358px;   
+                            }
                             .p-text{
                                 font-family: "Gilroy";
                                 font-size: 18px;
@@ -423,6 +473,112 @@ section{
                     }
                 }
                 
+            }
+            .contant-mobile{
+                display: none;
+                @include tabletHorizontal{
+                    display: block;
+                }
+                .text{
+                   margin-bottom: 20px;
+                    .h1-text{
+                        display: block;
+                        font-family: "Druk_Wide_Cyr";
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 120%; /* 38.4px */
+                        letter-spacing: -0.64px;
+                        text-transform: uppercase;
+                    }
+                    .p-text{
+                        display: block;
+                        width: 290px;
+                        font-family: Gilroy;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%; /* 16.8px */
+                        letter-spacing: -0.28px;
+                        color: #000;
+                        opacity: 0.6;
+                    }
+                }
+                .end-contant{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .button-programm{
+                        display: flex;
+                        gap: 10px;
+                        button{
+                            border: none;
+                            padding: 10px;
+                            border-radius: 1000px;
+                            background: rgba(0, 0, 0, 0.10);
+                        }
+                    }
+                }
+                .slider-program{
+                    
+                    .container-content{
+                        padding: 30px 0;
+                        border-top:1px solid black ;
+                        border-bottom:1px solid black ;
+                    }
+                    .content{
+                        display: flex;
+                        
+                        flex-direction: column;
+                        
+                        .h1-text{
+                            display: block;
+                            font-family: "Gilroy";
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 120%; /* 28.8px */
+                            letter-spacing: -0.48px;
+                            color: #000;
+                            opacity: 0.4;
+                        }
+                        .text{
+                            .h1-text{
+                                display: block;
+                                font-family: "Gilroy";
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 120%; /* 28.8px */
+                                letter-spacing: -0.48px;
+                                opacity: 1;
+                                margin-top: 40px;
+                            }
+                            .p-text{
+                                display: block;
+                                font-family: 'Gilroy';
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 120%; /* 16.8px */
+                                letter-spacing: -0.28px;
+                                color: #000;
+                                opacity: 0.6;
+                                width: 280px;
+                            }
+                        }
+                        
+                    }
+                    .tags{
+                        display: flex;
+                        gap: 10px;
+                        .tag{
+                            padding: 10px 20px;
+                            border-radius: 1000px;
+                            border: 1px solid rgba(0, 0, 0, 0.20);
+                        }
+                    }
+                }
             }
         }
     }
@@ -443,11 +599,77 @@ section{
                 letter-spacing: -1px;
                 text-transform: uppercase;
             }
+            .end-button{
+                display: none;
+                @include tabletHorizontal{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    button{
+                        padding: 20px 30px;
+                        border: 1px solid black;
+                    }
+                    .button-tarif{
+                        display: flex;
+                        gap: 10px;
+                        button{
+                            padding: 10px;
+                            border: none;
+                            border-radius: 1000px;
+                            background: rgba(0, 0, 0, 0.10);
+                        }
+                    }
+                }
+            }
+            .swipere{
+                display: none;
+                @include tabletHorizontal{
+                    display: block;
+                }
+                
+                .contant-mobile{
+                    .slider-tarif{
+                        display: flex;
+                        flex-direction: column;
+                        .text-white{
+                            padding: 30px 20px;
+                            background-color: #FFF;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            .h1-text{
+                                font-family: "Gilroy";
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 120%; /* 38.4px */
+                                letter-spacing: -0.64px;
+                            }
+                        }
+                        .p-text{
+                            display: block;
+                            padding: 20px;
+                            font-family: "Gilroy";
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 120%; /* 21.6px */
+                            letter-spacing: -0.36px;
+                        }
+                        .bg{
+                            background-color: rgba(0, 0, 0, 0.05);
+                        }
+                    }
+                }
+            }
             .content-start{
                 display: flex;
                 gap: 341px;
                 @include laptop{
                     gap: 108px;
+                }
+                @include tabletHorizontal{
+                    display: none;
                 }
                 .p-text{
                     font-size: 32px;
@@ -459,6 +681,7 @@ section{
                 .text{
                     display: flex;
                     gap: 20px;
+                    
                     .vip{
                         width: 415px;
                         display: flex;
@@ -485,6 +708,9 @@ section{
 
             }
             .table{
+                @include tabletHorizontal{
+                    display: none;
+                }
                 .main-content{
                     display: flex;
                     background-color:rgba(0, 0, 0, .1) ;
@@ -512,7 +738,13 @@ section{
                     background: none;
                 }
             }
+            .contant-mobile{
+
+            }
             .contant-end{
+                @include tabletHorizontal{
+                    display: none;
+                }
                 display: flex;
                 flex-direction: column;
                 gap: 50px;
@@ -587,6 +819,12 @@ section{
             display: flex;
             flex-direction: column;
             gap: 80px;
+            .descktop{
+                @include tabletHorizontal{
+                    display: none;
+                }
+            }
+            
             .start{
                 .h1-text{
                     font-family: "Druk_Wide_Cyr";
@@ -597,6 +835,10 @@ section{
                     line-height: 120%; /* 60px */
                     letter-spacing: -1px;
                     text-transform: uppercase;
+                    @include tabletHorizontal{
+                        font-size: 24px;
+                        width: 335px;
+                    }
                     .grey{
                         font-family: "Druk_Wide_Cyr";
                         color: #999;
@@ -610,17 +852,21 @@ section{
                 }
                 button{
                     width: 385px;
+                    @include tabletHorizontal{
+                        display: none;
+                    }
                 }
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
             }
+            
             .photo{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 20px;
-                @include small_laptop{
-
+                @include tabletHorizontal{
+                    display: none;
                 }
                 img{
                     max-width: 415px;
@@ -632,7 +878,44 @@ section{
                     }
                 }
             }
+            
         }
+        .mobile-contant{
+            display: none;
+            @include tabletHorizontal{
+                display: block;
+            }
+            img{
+                width: 100%;
+            }
+            .h1-text{
+                font-family: "Druk_Wide_Cyr";
+                width: 335px;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 60px */
+                letter-spacing: -1px;
+                text-transform: uppercase;
+                
+        }
+        .end-contant{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .button-programm{
+                display: flex;
+                gap: 10px;
+                button{
+                    border: none;
+                    border-radius: 1000px;
+                    padding: 10px;
+                    background: rgba(0, 0, 0, 0.10);
+                }
+            }   
+        }
+    }
+        
     }
     .rewievs-section{
         background-color: $black;
@@ -1265,13 +1548,27 @@ section{
                 line-height: 120%; /* 60px */
                 letter-spacing: -1px;
                 text-transform: uppercase;
+                @include tabletVertical{
+                    font-size: 32px;
+                }
             }
             .contant{
                 display: flex;
                 justify-content: space-between;
+                @include tabletHorizontal{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    gap: 45px;
+                }
                 .text{
                     display: flex;
                     gap: 200px;
+                    @include tabletHorizontal{
+                        display: flex;
+                        gap: 20px;
+                        flex-direction: column;
+                    }
                     a{
                         text-decoration: none;
                         .number{
@@ -1285,6 +1582,9 @@ section{
                                 font-weight: 500;
                                 line-height: 120%; /* 28.8px */
                                 letter-spacing: -0.48px;
+                                @include tabletVertical{
+                                    font-size: 18px;
+                                }
                             }
                         }
                     }
@@ -1329,10 +1629,24 @@ section{
             text-align: center;
             color: white;
             width: 1180px;
+            @include small_laptop{
+                max-width: 700px;
+                font-size: 50px;
+            }
+            @include tabletVertical{
+                font-size: 30px;
+                width: 335px;
+            }
+            @include mobile{
+                width: 335px;
+            }
+
         }
         button{
             width: 580px;
-
+            @include tabletVertical{
+                width: 335px;
+            }
         }
     }
 }
@@ -1359,3 +1673,4 @@ section{
            
 
         }
+        

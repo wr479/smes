@@ -1,3 +1,32 @@
+.menu {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  top: 50px;
+}
+.menu .h1-text {
+  display: block;
+  font-family: "Druk_Wide_Cyr";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+  padding: 40px 20px;
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu button {
+  position: fixed;
+  bottom: 20px;
+  color: black;
+  border: 1px solid black;
+  width: 100%;
+  background-color: white;
+}
+
 @font-face {
   font-family: "Druk_Wide_Cyr";
   src: url(../fonts/drukCyr/drukwidecyr-bold.woff2), url(../fonts/drukCyr/drukwidecyr-bold.woff);
@@ -29,6 +58,21 @@
 @media (max-width: 1550px) {
   :root {
     --container:1345px;
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --container:900px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --container:540px;
+  }
+}
+@media (max-width: 424px) {
+  :root {
+    --container:335px ;
   }
 }
 
@@ -113,16 +157,23 @@ section .hero-section {
   padding-top: 200px;
   padding-bottom: 40px;
   width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-position: right;
   background-image: url(../images/background/man.png);
   background-repeat: no-repeat;
+}
+@media (max-width: 1024px) {
+  section .hero-section {
+    background-position: bottom;
+    padding-top: 100px;
+  }
 }
 section .hero-section.croot {
   background-image: url(../images/background/poom.png);
 }
 section .hero-section.eat {
   background-image: url(../images/background/eat.png);
-  background-size: contain;
-  background-position: right;
 }
 section .hero-section.program {
   background-image: url(../images/background/program.png);
@@ -173,6 +224,11 @@ section .hero-section .hero-container .content .h1-text {
   text-transform: uppercase;
   color: #ffffff;
 }
+@media (max-width: 1024px) {
+  section .hero-section .hero-container .content .h1-text {
+    width: 335px;
+  }
+}
 section .hero-section .hero-container .content .h1-text .grey {
   font-family: "Druk_Wide_Cyr";
   color: rgba(255, 255, 255, 0.6);
@@ -184,6 +240,11 @@ section .hero-section .hero-container .content .arror-text {
   gap: 30px;
   backdrop-filter: blur(100px);
   width: 800px;
+}
+@media (max-width: 1024px) {
+  section .hero-section .hero-container .content .arror-text {
+    width: 605px;
+  }
 }
 section .hero-section .hero-container .content .arror-text .h1-text {
   display: block;
@@ -258,12 +319,22 @@ section .section-hello .hello-container button {
 section .swiper-container .cars {
   display: flex;
 }
+@media (max-width: 1024px) {
+  section .swiper-container .cars {
+    flex-direction: column;
+  }
+}
 section .swiper-container .cars .card {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 40px;
   border-right: 1px solid rgb(0, 0, 0);
+}
+@media (max-width: 1024px) {
+  section .swiper-container .cars .card {
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
 }
 section .swiper-container .cars .card .h1-text {
   font-family: "Gilroy";
@@ -309,6 +380,14 @@ section .auto-section .h1-text {
   line-height: 120%; /* 60px */
   letter-spacing: -1px;
 }
+@media (max-width: 1024px) {
+  section .auto-section .h1-text {
+    font-size: 32px;
+  }
+}
+section .auto-section .h1-text svg {
+  height: 24px;
+}
 section .stages-section {
   background-color: rgb(0, 0, 0);
   padding: 140px 0;
@@ -335,6 +414,11 @@ section .stages-section .stages-container .start button {
   align-content: flex-start;
   height: 62px;
 }
+@media (max-width: 1024px) {
+  section .stages-section .stages-container .start button {
+    display: none;
+  }
+}
 section .stages-section .stages-container .p-text {
   display: block;
   width: 614px;
@@ -346,6 +430,16 @@ section .stages-section .stages-container .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border: 1px solid #ffffff;
+}
+@media (max-width: 1024px) {
+  section .stages-section .stages-container .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  section .stages-section .stages-container .cards svg {
+    display: none;
+  }
 }
 section .stages-section .stages-container .cards .white {
   display: flex;
@@ -441,6 +535,11 @@ section .program-section .program-container .contant-start {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 767px) {
+  section .program-section .program-container .contant-start {
+    display: none;
+  }
+}
 section .program-section .program-container .contant-start .program {
   display: flex;
   justify-content: space-between;
@@ -484,6 +583,11 @@ section .program-section .program-container .contant-start .container-content .t
   gap: 10px;
   width: 320px;
 }
+@media (max-width: 1024px) {
+  section .program-section .program-container .contant-start .container-content .tags {
+    width: 272px;
+  }
+}
 section .program-section .program-container .contant-start .container-content .tags .tag {
   padding: 10px 20px;
   font-size: 18px;
@@ -493,6 +597,11 @@ section .program-section .program-container .contant-start .container-content .t
   letter-spacing: -0.36px;
   border-radius: 1000px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1024px) {
+  section .program-section .program-container .contant-start .container-content .tags .tag {
+    font-size: 14px;
+  }
 }
 section .program-section .program-container .contant-start .container-content .content {
   display: flex;
@@ -504,6 +613,11 @@ section .program-section .program-container .contant-start .container-content .c
     gap: 288px;
   }
 }
+@media (max-width: 1024px) {
+  section .program-section .program-container .contant-start .container-content .content {
+    gap: 119px;
+  }
+}
 section .program-section .program-container .contant-start .container-content .content .h1-text {
   font-family: "Gilroy";
   display: block;
@@ -513,10 +627,20 @@ section .program-section .program-container .contant-start .container-content .c
   line-height: 120%; /* 38.4px */
   letter-spacing: -0.64px;
 }
+@media (max-width: 1024px) {
+  section .program-section .program-container .contant-start .container-content .content .h1-text {
+    font-size: 20px;
+  }
+}
 section .program-section .program-container .contant-start .container-content .content .text {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media (max-width: 1024px) {
+  section .program-section .program-container .contant-start .container-content .content .text {
+    width: 358px;
+  }
 }
 section .program-section .program-container .contant-start .container-content .content .text .p-text {
   font-family: "Gilroy";
@@ -525,6 +649,106 @@ section .program-section .program-container .contant-start .container-content .c
   font-weight: 500;
   line-height: 120%; /* 21.6px */
   letter-spacing: -0.36px;
+}
+section .program-section .program-container .contant-mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  section .program-section .program-container .contant-mobile {
+    display: block;
+  }
+}
+section .program-section .program-container .contant-mobile .text {
+  margin-bottom: 20px;
+}
+section .program-section .program-container .contant-mobile .text .h1-text {
+  display: block;
+  font-family: "Druk_Wide_Cyr";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+section .program-section .program-container .contant-mobile .text .p-text {
+  display: block;
+  width: 290px;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: -0.28px;
+  color: #000;
+  opacity: 0.6;
+}
+section .program-section .program-container .contant-mobile .end-contant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .program-section .program-container .contant-mobile .end-contant .button-programm {
+  display: flex;
+  gap: 10px;
+}
+section .program-section .program-container .contant-mobile .end-contant .button-programm button {
+  border: none;
+  padding: 10px;
+  border-radius: 1000px;
+  background: rgba(0, 0, 0, 0.1);
+}
+section .program-section .program-container .contant-mobile .slider-program .container-content {
+  padding: 30px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+section .program-section .program-container .contant-mobile .slider-program .content {
+  display: flex;
+  flex-direction: column;
+}
+section .program-section .program-container .contant-mobile .slider-program .content .h1-text {
+  display: block;
+  font-family: "Gilroy";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  color: #000;
+  opacity: 0.4;
+}
+section .program-section .program-container .contant-mobile .slider-program .content .text .h1-text {
+  display: block;
+  font-family: "Gilroy";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  opacity: 1;
+  margin-top: 40px;
+}
+section .program-section .program-container .contant-mobile .slider-program .content .text .p-text {
+  display: block;
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: -0.28px;
+  color: #000;
+  opacity: 0.6;
+  width: 280px;
+}
+section .program-section .program-container .contant-mobile .slider-program .tags {
+  display: flex;
+  gap: 10px;
+}
+section .program-section .program-container .contant-mobile .slider-program .tags .tag {
+  padding: 10px 20px;
+  border-radius: 1000px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 section .table-section {
   padding: 140px 0;
@@ -545,6 +769,70 @@ section .table-section .table-container .h1-text {
   letter-spacing: -1px;
   text-transform: uppercase;
 }
+section .table-section .table-container .end-button {
+  display: none;
+}
+@media (max-width: 1024px) {
+  section .table-section .table-container .end-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section .table-section .table-container .end-button button {
+    padding: 20px 30px;
+    border: 1px solid black;
+  }
+  section .table-section .table-container .end-button .button-tarif {
+    display: flex;
+    gap: 10px;
+  }
+  section .table-section .table-container .end-button .button-tarif button {
+    padding: 10px;
+    border: none;
+    border-radius: 1000px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+section .table-section .table-container .swipere {
+  display: none;
+}
+@media (max-width: 1024px) {
+  section .table-section .table-container .swipere {
+    display: block;
+  }
+}
+section .table-section .table-container .swipere .contant-mobile .slider-tarif {
+  display: flex;
+  flex-direction: column;
+}
+section .table-section .table-container .swipere .contant-mobile .slider-tarif .text-white {
+  padding: 30px 20px;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+section .table-section .table-container .swipere .contant-mobile .slider-tarif .text-white .h1-text {
+  font-family: "Gilroy";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: -0.64px;
+}
+section .table-section .table-container .swipere .contant-mobile .slider-tarif .p-text {
+  display: block;
+  padding: 20px;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.36px;
+}
+section .table-section .table-container .swipere .contant-mobile .slider-tarif .bg {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 section .table-section .table-container .content-start {
   display: flex;
   gap: 341px;
@@ -552,6 +840,11 @@ section .table-section .table-container .content-start {
 @media (max-width: 1700px) {
   section .table-section .table-container .content-start {
     gap: 108px;
+  }
+}
+@media (max-width: 1024px) {
+  section .table-section .table-container .content-start {
+    display: none;
   }
 }
 section .table-section .table-container .content-start .p-text {
@@ -587,6 +880,11 @@ section .table-section .table-container .content-start .text .vip .p-text {
   line-height: 120%; /* 21.6px */
   letter-spacing: -0.36px;
 }
+@media (max-width: 1024px) {
+  section .table-section .table-container .table {
+    display: none;
+  }
+}
 section .table-section .table-container .table .main-content {
   display: flex;
   background-color: rgba(0, 0, 0, 0.1);
@@ -619,6 +917,11 @@ section .table-section .table-container .contant-end {
   display: flex;
   flex-direction: column;
   gap: 50px;
+}
+@media (max-width: 1024px) {
+  section .table-section .table-container .contant-end {
+    display: none;
+  }
 }
 section .table-section .table-container .contant-end .prices {
   display: flex;
@@ -694,6 +997,11 @@ section .result-section .result-container {
   flex-direction: column;
   gap: 80px;
 }
+@media (max-width: 1024px) {
+  section .result-section .result-container .descktop {
+    display: none;
+  }
+}
 section .result-section .result-container .start {
   display: flex;
   justify-content: space-between;
@@ -709,6 +1017,12 @@ section .result-section .result-container .start .h1-text {
   letter-spacing: -1px;
   text-transform: uppercase;
 }
+@media (max-width: 1024px) {
+  section .result-section .result-container .start .h1-text {
+    font-size: 24px;
+    width: 335px;
+  }
+}
 section .result-section .result-container .start .h1-text .grey {
   font-family: "Druk_Wide_Cyr";
   color: #999;
@@ -722,10 +1036,20 @@ section .result-section .result-container .start .h1-text .grey {
 section .result-section .result-container .start button {
   width: 385px;
 }
+@media (max-width: 1024px) {
+  section .result-section .result-container .start button {
+    display: none;
+  }
+}
 section .result-section .result-container .photo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+}
+@media (max-width: 1024px) {
+  section .result-section .result-container .photo {
+    display: none;
+  }
 }
 section .result-section .result-container .photo img {
   max-width: 415px;
@@ -739,6 +1063,42 @@ section .result-section .result-container .photo img {
   section .result-section .result-container .photo img {
     max-width: 292px;
   }
+}
+section .result-section .mobile-contant {
+  display: none;
+}
+@media (max-width: 1024px) {
+  section .result-section .mobile-contant {
+    display: block;
+  }
+}
+section .result-section .mobile-contant img {
+  width: 100%;
+}
+section .result-section .mobile-contant .h1-text {
+  font-family: "Druk_Wide_Cyr";
+  width: 335px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 60px */
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+section .result-section .mobile-contant .end-contant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .result-section .mobile-contant .end-contant .button-programm {
+  display: flex;
+  gap: 10px;
+}
+section .result-section .mobile-contant .end-contant .button-programm button {
+  border: none;
+  border-radius: 1000px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
 }
 section .rewievs-section {
   background-color: rgb(0, 0, 0);
@@ -1369,13 +1729,33 @@ section .map-section .map-container .h1-text {
   letter-spacing: -1px;
   text-transform: uppercase;
 }
+@media (max-width: 767px) {
+  section .map-section .map-container .h1-text {
+    font-size: 32px;
+  }
+}
 section .map-section .map-container .contant {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1024px) {
+  section .map-section .map-container .contant {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 45px;
+  }
+}
 section .map-section .map-container .contant .text {
   display: flex;
   gap: 200px;
+}
+@media (max-width: 1024px) {
+  section .map-section .map-container .contant .text {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
 }
 section .map-section .map-container .contant .text a {
   text-decoration: none;
@@ -1392,6 +1772,11 @@ section .map-section .map-container .contant .text a .number .p-text {
   font-weight: 500;
   line-height: 120%; /* 28.8px */
   letter-spacing: -0.48px;
+}
+@media (max-width: 767px) {
+  section .map-section .map-container .contant .text a .number .p-text {
+    font-size: 18px;
+  }
 }
 section .map-section .map-container .contant .icon {
   display: flex;
@@ -1431,8 +1816,30 @@ section .content-error .h1-text {
   color: white;
   width: 1180px;
 }
+@media (max-width: 1550px) {
+  section .content-error .h1-text {
+    max-width: 700px;
+    font-size: 50px;
+  }
+}
+@media (max-width: 767px) {
+  section .content-error .h1-text {
+    font-size: 30px;
+    width: 335px;
+  }
+}
+@media (max-width: 424px) {
+  section .content-error .h1-text {
+    width: 335px;
+  }
+}
 section .content-error button {
   width: 580px;
+}
+@media (max-width: 767px) {
+  section .content-error button {
+    width: 335px;
+  }
 }
 
 .ticker {
@@ -1874,6 +2281,21 @@ footer .footer-section .footer-container .three .grid input {
     --container:1345px;
   }
 }
+@media (max-width: 1024px) {
+  :root {
+    --container:900px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --container:540px;
+  }
+}
+@media (max-width: 424px) {
+  :root {
+    --container:335px ;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -1917,10 +2339,29 @@ header .header .headers-container {
   justify-content: space-between;
   padding: 10px 0;
 }
+header .header .headers-container .mobile-svg {
+  display: none;
+}
+@media (max-width: 1024px) {
+  header .header .headers-container .mobile-svg {
+    display: block;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1024px) {
+  header .header .headers-container button {
+    display: none;
+  }
+}
 header .header .headers-container .content {
   display: flex;
   gap: 60px;
   align-items: center;
+}
+@media (max-width: 1700px) {
+  header .header .headers-container .content {
+    gap: 30px;
+  }
 }
 header .header .headers-container .content img {
   width: 260px;
@@ -1930,9 +2371,14 @@ header .header .headers-container .content .text {
   display: flex;
   gap: 40px;
 }
-@media (max-width: 1550px) {
+@media (max-width: 1700px) {
   header .header .headers-container .content .text {
     gap: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  header .header .headers-container .content .text {
+    display: none;
   }
 }
 header .header .headers-container .content .text .p-text {
@@ -1964,6 +2410,11 @@ header.room .headers-container .content {
   gap: 60px;
   align-items: center;
 }
+@media (max-width: 1550px) {
+  header.room .headers-container .content {
+    gap: 30px;
+  }
+}
 header.room .headers-container .content svg {
   width: 260px;
   height: 21px;
@@ -1975,11 +2426,29 @@ header.room .headers-container .content .text {
   display: flex;
   gap: 40px;
 }
+@media (max-width: 1550px) {
+  header.room .headers-container .content .text {
+    gap: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  header.room .headers-container .content .text {
+    display: none;
+  }
+}
 header.room .headers-container .content .text .p-text {
   font-family: "Gilroy";
   display: block;
   color: rgb(0, 0, 0);
   opacity: 0.6;
+}
+
+.black-line, .black-logo {
+  display: none;
+}
+
+.black-line-on, .black-logo-on {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

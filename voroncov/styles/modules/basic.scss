@@ -12,6 +12,15 @@
     @include small_laptop{
         --container:1345px;
     };
+    @include tabletHorizontal{
+        --container:900px;
+    };
+    @include tabletVertical{
+        --container:540px;
+    };
+    @include  mobile{
+        --container:335px
+    }
     
 };
 
